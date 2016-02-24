@@ -14,6 +14,7 @@ class Welcome extends Controller
     $this->view('Welcome/index', ['name' => $user->name]);
   }
 
+  //Adds user to database.
   public function create()
   {
     User::create([
