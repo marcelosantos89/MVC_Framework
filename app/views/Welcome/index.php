@@ -1,2 +1,8 @@
-<h1>Welcome to the MVC_Framework</h1>
-<p><?php echo $data['name'];?> was here.</p>
+<htm>
+  <head>
+  </head>
+  <body>
+    <h1>Welcome to the MVC_Framework</h1>
+    <p><?php echo $data['name'];?> was here.</p>
+  </body>
+</html>
