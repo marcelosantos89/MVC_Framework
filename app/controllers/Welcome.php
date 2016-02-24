@@ -1,27 +1,23 @@
 <?php
 
-/**
- * Class Welcome First Controller
- */
 class Welcome extends Controller
 {
 
-  public function index($name = '')
+  /**
+	 * Index Page for this controller.
+	 *
+	 * Maps to the following URL
+	 * 		http://example.com/welcome
+	 * 		http://example.com/welcome/index
+	 *  	http://example.com/
+	 *
+   *	To change Default controller go to (ROOT)/app/config/routes.php
+	 */
+  public function index()
   {
-
     $user = new User;
-
-    $this->view('Welcome/index', ['name' => $user->name]);
-  }
-
-  //Adds user to database.
-  public function create()
-  {
-    User::create([
-      'name' => 'Marcelo',
-      'lastname' => 'Santos',
-      'email' => 'geral@marcelosantos.pt'
-    ]);
+    $data['name'] = $user->name;
+    $this->view('Welcome/index', $data);
   }
 
 }

@@ -1,9 +1,11 @@
 <?php
 
-/**
- *
- */
 class Controller {
+
+  /**
+   * @todo Better comments
+   * @todo Check if file_exists before require_once
+   */
 
   public function model($model)
   {
@@ -15,7 +17,6 @@ class Controller {
   public function view($view, $data = [])
   {
     require_once '../app/views/'.$view.'.php';
-    
   }
 
 

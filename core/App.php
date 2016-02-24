@@ -1,16 +1,17 @@
 <?php
 
-/**
- *
- */
 class App
 {
-  protected $controller = 'Welcome';
+
+  protected $controller;
   protected $method = 'index';
   protected $params = [];
 
   public function __construct()
   {
+    include '../app/config/routes.php';
+    $this->controller = $route['default'];
+
     $url = $this->parseUrl();
 
     if(file_exists('../app/controllers/'.$url[0].'.php'))
