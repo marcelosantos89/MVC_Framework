@@ -1,10 +1,14 @@
 {
     "require": {
-      "illuminate/database" : "4.2.*"
+      "illuminate/database" : "4.2.*",
+        "pimple/pimple": "~3.0"
     },
     "autoload": {
       "classmap": [
         "app/models"
-      ]
+      ],
+      "psr-4": {
+      	"Core\\" : "core/"
+      }
     }
 }

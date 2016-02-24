@@ -1,5 +1,7 @@
 <?php
 
+use Core\Controller;
+
 class Welcome extends Controller
 {
 

@@ -1,5 +1,7 @@
 <?php
 
+namespace Core;
+
 class App
 {
 
@@ -8,6 +10,12 @@ class App
   protected $params = [];
 
   public function __construct()
+  {
+    
+
+  }
+
+  public function run()
   {
     include '../app/config/routes.php';
     $this->controller = $route['default'];
@@ -36,7 +44,6 @@ class App
     $this->params = $url ? array_values($url) : [];
 
     call_user_func_array([$this->controller, $this->method], $this->params);
-
   }
 
   public function parseUrl(){
