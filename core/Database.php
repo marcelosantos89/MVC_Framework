@@ -1,5 +1,9 @@
 <?php
 
+namespace Core;
+
+// @todo: need to be refactoring.
+
   require_once '../app/config/database.php';
 
   use Illuminate\Database\Capsule\Manager as Capsule;
