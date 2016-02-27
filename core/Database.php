@@ -1,20 +1,20 @@
 <?php
 
-  require_once '../app/config/database.php';
+  $config = include '../app/config/database.php';
 
   use Illuminate\Database\Capsule\Manager as Capsule;
 
   $capsule = new Capsule();
 
   $capsule->addConnection([
-    'driver' => $config['database']['driver'],
-    'host' => $config['database']['host'],
-    'username' => $config['database']['username'],
-    'password' => $config['database']['password'],
-    'database' => $config['database']['database'],
-    'charset' => $config['database']['charset'],
-    'collation' => $config['database']['collation'],
-    'prefix' => $config['database']['prefix']
+    'driver' => $config['driver'],
+    'host' => $config['host'],
+    'username' => $config['username'],
+    'password' => $config['password'],
+    'database' => $config['database'],
+    'charset' => $config['charset'],
+    'collation' => $config['collation'],
+    'prefix' => $config['prefix']
   ]);
 
   $capsule->bootEloquent();

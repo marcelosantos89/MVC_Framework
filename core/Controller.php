@@ -28,10 +28,17 @@ class Controller {
    */
   public function view($view, $data = [])
   {
+    require_once 'helpers/template.php';
+
     if(file_exists('../app/views/'.$view.'.php'))
       require_once '../app/views/'.$view.'.php';
     else
       throw new Exception("View ".$view." could not be loaded", 1);
+  }
+
+  public function json($data = []){
+      header('Content-Type: application/json');
+      echo json_encode($data);
   }
 
 

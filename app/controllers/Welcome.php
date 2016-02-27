@@ -17,7 +17,10 @@ class Welcome extends Controller
   {
     $user = new User;
     $data['name'] = $user->name;
+
     $this->view('Welcome/index', $data);
+
+    $this->json($data);
   }
 
 }
