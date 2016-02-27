@@ -36,5 +36,10 @@ class Controller {
       throw new Exception("View ".$view." could not be loaded", 1);
   }
 
+  public function json($data = []){
+      header('Content-Type: application/json');
+      echo json_encode($data);
+  }
+
 
 }
