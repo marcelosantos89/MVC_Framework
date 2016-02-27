@@ -9,7 +9,8 @@ class App
 
   public function __construct()
   {
-    include '../app/config/routes.php';
+    $route = include '../app/config/routes.php';
+    
     $this->controller = $route['default'];
 
     $url = $this->parseUrl();
